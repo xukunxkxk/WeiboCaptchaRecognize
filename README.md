@@ -1,3 +1,3 @@
 # WeiboCaptchaRecognize
-# CNNs and RNNs recognize Weibo  Captcha
-整理之前写的项目代码。
+# Using CNNs and RNNs recognize Weibo  Captcha
+整理之前所写的项目代码。
