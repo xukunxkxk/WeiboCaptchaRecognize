@@ -13,3 +13,6 @@
 
 ## 微博验证码形式
 ![image](https://github.com/xukunxkxk/WeiboCaptchaRecognize/raw/master/model/6pAVy.jpg)
+长：100px, 宽：40px， 由大小写字母与数字组成。  
+这样的验证码有一定的扭曲、粘连、干扰线，使用传统的分割+识别效果可能受到影响。  
+我们可以不分割图片，采用端到端的形式进行识别。
