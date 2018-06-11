@@ -31,8 +31,9 @@ class VGGNet(object):
             conv_name = name + "_conv"
             bn_name = name + "_bn"
 
-        # define a CONV > BN > Dropout pattern
-        x = Conv2D(filters, (3, 3), kernel_regularizer=l2(l2_rate), activation='relu', name=conv_name)(x)
+        # define a CONV > BN
+        x = Conv2D(filters, (3, 3), kernel_regularizer=l2(l2_rate), activation='relu', padding='same',
+                   name=conv_name)(x)
         x = BatchNormalization(axis=cha_dim, name=bn_name)(x)
         return x
 
@@ -58,8 +59,8 @@ class VGGNet(object):
         input_image = Input(shape=input_shape)
         layer = input_image
         # define cnn arc like vgg
-        for block, (conv_num, filter) in enumerate(conv_nums, filters):
-            for stage in conv_num:
+        for block, (conv_num, filter) in enumerate(zip(conv_nums, filters)):
+            for stage in range(conv_num):
                 layer = VGGNet.conv_module(layer, filter, chan_dim, l2_rate,
                                            name='block_{0}_stage_{1}'.format(block, stage))
             # add drop out after each block and pooling
@@ -74,6 +75,6 @@ class VGGNet(object):
         model = Model(inputs=input_image, outputs=layer)
         return model
 
-
+    
 if __name__ == '__main__':
     pass
