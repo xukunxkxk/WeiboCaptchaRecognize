@@ -59,7 +59,7 @@ if __name__ == '__main__':
     # initialize the model
     if args['start_epoch'] == 0:
         if net == 'VGG':
-            model = VGGNet.build(WIDTH, HEIGHT, depth, [2, 2, 2, 2, 2], [32, 64, 238, 256, 512], 2e-4)
+            model = VGGNet.build(WIDTH, HEIGHT, depth, [2, 2, 2, 2, 2], [32, 64, 256, 256, 512], 2e-4)
             model = FCHead.build(model, char_nums, class_num, split)
         elif net == 'ResNet':
             model = ResNet.build(WIDTH, HEIGHT, depth, (9, 9, 9), (64, 64, 128, 256), 2e-4)
