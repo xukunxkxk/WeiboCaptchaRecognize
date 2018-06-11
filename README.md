@@ -78,3 +78,8 @@
 模型CNN部分与VGG的类似，CNN 部分的输出为m * n * filter_size的特征，m为图片的长度，n为图片的宽度.  
 将图片的“每一条”作为特征，输入LSTM，即m * n * filter_size 转变为  n *(m*filter_size)，  
 在LSTM之上使用Attention、连接Softmax进行分类。  
+
+## 性能分析
+在训练集为4w，验证集为1w的数据集上，各模型的表现如下：
+---------|----------
+模型|验证集准确率
