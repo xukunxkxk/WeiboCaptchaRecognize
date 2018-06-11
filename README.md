@@ -80,11 +80,9 @@
 在LSTM之上使用Attention、连接Softmax进行分类。  
 
 ## 性能
-在训练集为4w，验证集为1w的数据集上，各模型的表现如下：   
-|Model|Validation set accuracy|
-|---|---|
-|VGG|93.64%|
-|GoogLeNet|93.28%|
-|ResNet|96.41%|
-|VGG + LSTM|93.58%|
-|VGG + LSTM+  Attention|95.64%|
+在训练集为4w，验证集为1w的数据集上，各模型在验证机上的表现如下：   
+VGG: 93.64%  
+GoogLeNet: 93.28%
+ResNet: 96.41%
+VGG+LSTM: 93.58%
+VGG+LSTM+Attention: 95.64%
