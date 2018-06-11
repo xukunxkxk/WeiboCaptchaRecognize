@@ -72,9 +72,9 @@
 与传统的VGG不同的是，在设计网络的时候，1.在卷积后连接了BN层，加快收敛， 2.采取了GlobalEveryPooling替代全连接层，减少参数  
 
 ## RNN识别验证码
-使用卷积神经网络提取图片特征，RNN进行序列建模，识别每一位验证码
-以AttentionLSTM为例，
+使用卷积神经网络提取图片特征，RNN进行序列建模，识别每一位验证码  
+以AttentionLSTM为例：  
 ![image](https://github.com/xukunxkxk/WeiboCaptchaRecognize/raw/master/model/AttentionLSTM.png)  
-模型CNN部分与VGG的类似，CNN 部分的输出为m * n * filter_size的特征，m为图片的长度，n为图片的宽度.
-将图片的“每一条”作为特征，输入LSTM，即m * n * filter_size 转变为  n *(m*filter_size)，
-在LSTM之上使用Attention、连接Softmax进行分类。
+模型CNN部分与VGG的类似，CNN 部分的输出为m * n * filter_size的特征，m为图片的长度，n为图片的宽度.  
+将图片的“每一条”作为特征，输入LSTM，即m * n * filter_size 转变为  n *(m*filter_size)，  
+在LSTM之上使用Attention、连接Softmax进行分类。  
