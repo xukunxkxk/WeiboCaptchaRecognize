@@ -19,4 +19,4 @@
 ## CNN识别验证码
 使用卷积神经网络提取图片特征，多个全连接层分别识别每一位的验证码。  
 以VGG网络为例  
-![image](https://github.com/xukunxkxk/WeiboCaptchaRecognize/raw/master/model/VGG.jpg)  
+![image](https://github.com/xukunxkxk/WeiboCaptchaRecognize/raw/master/model/VGG.png)  
