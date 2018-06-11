@@ -19,4 +19,7 @@
 ## CNN识别验证码
 使用卷积神经网络提取图片特征，多个全连接层分别识别每一位的验证码。  
 以VGG网络为例  
+所使用的类似VGG的结构可视化如下：  
 ![image](https://github.com/xukunxkxk/WeiboCaptchaRecognize/raw/master/model/VGG.png)  
+在VGG网络提取图片特征之后，送入五个softmax层进行分类，之后将这些五个向量合并，一起计算交叉熵作为损失函数。  
+与传统的VGG不同的是，在设计网络的时候，1.在卷积后连接了BN层，加快收敛， 2.采取了GlobalEveryPooling替代全连接层，减少参数  
