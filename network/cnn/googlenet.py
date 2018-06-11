@@ -17,7 +17,7 @@ class GoogLeNet(object):
     @staticmethod
     def build(width, height, depth, reg=0.0005):
         """
-        Build CNN network like vgg and use GlobalAveragePooling to reduce parameters
+        Build CNN network like GoogLeNet and use GlobalAveragePooling to reduce parameters
         :param width: Integer. The width of the image
         :param height: Integer. The height of the image
         :param depth: Integer. The depth of the image
