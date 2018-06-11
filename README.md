@@ -12,4 +12,4 @@
 - 依赖包：Keras, Tensorflow, numpy, matplotlib, opencv-python, imutils, scikit-learn
 
 ## 微博验证码形式
-![image](http://github.com/xukunxkxk/WeiboCaptchaRecognize/raw/master/model/6pAVy.jpg)
+![image](https://github.com/xukunxkxk/WeiboCaptchaRecognize/raw/master/model/6pAVy.jpg)
